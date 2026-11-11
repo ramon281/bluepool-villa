@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>บลูพูล วิลล่า – จองพูลวิลล่า</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff4f8;--surf:#fff;--ink:#4a2c5a;--mute:#8a6f98;--line:#f7d9e7;--pool:#d6457f;--pool2:#b8326a;--onpool:#fff;--sun:#ffd36e;--sunink:#5a3a00;--ok:#2a9468;--bad:#d03a5a;--hero1:#ffc4da;--hero2:#d3c6ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241526;--surf:#33203a;--ink:#ffe9f2;--mute:#cfaec6;--line:#54345c;--pool:#ff8fb5;--pool2:#ffb3cf;--onpool:#3a1030;--sun:#ffd36e;--sunink:#3a2600;--ok:#6fd9a6;--bad:#ff8a9f;--hero1:#5a2f6e;--hero2:#3d3a7a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#241526;--surf:#33203a;--ink:#ffe9f2;--mute:#cfaec6;--line:#54345c;--pool:#ff8fb5;--pool2:#ffb3cf;--onpool:#3a1030;--sun:#ffd36e;--sunink:#3a2600;--ok:#6fd9a6;--bad:#ff8a9f;--hero1:#5a2f6e;--hero2:#3d3a7a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) radial-gradient(var(--line) 1.6px,transparent 1.7px) 0 0/28px 28px;color:var(--ink);font:400 16px/1.6 "IBM Plex Sans Thai","Noto Sans Thai",Tahoma,sans-serif}
+h1,h2,h3{font-family:Mali,"IBM Plex Sans Thai",Tahoma,sans-serif;font-weight:700;line-height:1.3;margin:0}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 18% 28%,rgba(255,255,255,.55) 0 70px,transparent 71px),radial-gradient(circle at 86% 78%,rgba(255,255,255,.4) 0 120px,transparent 121px),radial-gradient(circle at 62% 14%,rgba(255,255,255,.35) 0 36px,transparent 37px),linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--ink);padding:36px 0 78px}
+header.hero .wrap{position:relative;z-index:1}
+.wave{position:absolute;left:0;bottom:-1px;width:100%;height:42px;display:block}
+.dc{position:absolute;pointer-events:none;line-height:1}
+.d1{right:11%;top:26%;font-size:54px}.d2{right:26%;top:56%;font-size:26px}.d3{right:4%;top:62%;font-size:30px}.d4{right:34%;top:18%;font-size:24px}
+@media (max-width:640px){.dc{opacity:.35}}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:38px}
+.logo{font:700 21px Mali,sans-serif}
+.navbtn{background:var(--surf);border:2px solid var(--line);color:var(--pool2);padding:7px 16px;border-radius:999px;cursor:pointer;font-weight:500}
+.hero h1{font-size:clamp(28px,5vw,46px);max-width:15em}
+.hero p{max-width:34em;opacity:.92;margin:10px 0 0}
+.search{background:var(--surf);color:var(--ink);border:2px solid var(--line);border-radius:26px;padding:18px;margin-top:-40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;box-shadow:0 12px 30px rgba(214,69,127,.18);position:relative}
+label.f{display:block;font-size:13px;color:var(--mute)}
+.search input,.search select,.m input[type=text],.m input[type=tel],.m input[type=date],.m input[type=number],.m select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.btn{background:var(--pool);color:var(--onpool);border:0;border-radius:999px;padding:11px 20px;cursor:pointer;font-weight:500}
+.btn:hover{background:var(--pool2)}
+.btn.sun{background:var(--sun);color:var(--sunink)}
+.btn.ghost{background:transparent;color:var(--pool);border:1px solid var(--pool)}
+.search .btn{align-self:end}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:26px 0 14px}
+.chip{border:1px solid var(--line);background:var(--surf);padding:6px 14px;border-radius:999px;cursor:pointer;font-size:14px}
+.chip[aria-pressed=true]{background:var(--pool);border-color:var(--pool);color:var(--onpool)}
+.tools select{padding:6px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surf);margin-left:auto}
+#count{color:var(--mute);font-size:14px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;padding-bottom:50px}
+.card{background:var(--surf);border:2px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 22px rgba(214,69,127,.12)}
+.pic{height:160px;display:flex;align-items:flex-end;justify-content:space-between;padding:12px 14px;font-size:58px;line-height:1;position:relative;background-blend-mode:normal}
+.pic::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 25%,rgba(255,255,255,.6) 0 26px,transparent 27px),radial-gradient(circle at 15% 20%,rgba(255,255,255,.45) 0 14px,transparent 15px)}
+.pic>*{position:relative}
+.pic small{font-size:13px;background:rgba(255,255,255,.88);color:#6b3a5a;padding:2px 12px;border-radius:999px}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font-size:18px}
+.meta{color:var(--mute);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;background:var(--bg);border:1px solid var(--line);padding:1px 9px;border-radius:999px}
+.price{margin-top:auto;display:flex;justify-content:space-between;align-items:end;gap:10px}
+.price b{font:700 21px Mali,sans-serif;color:var(--pool)}
+.status{font-size:13px}
+.status.ok{color:var(--ok)}.status.no{color:var(--bad)}
+.empty{grid-column:1/-1;text-align:center;color:var(--mute);padding:40px 0}
+dialog{border:3px solid var(--line);border-radius:30px;padding:0;background:var(--surf);color:var(--ink);width:min(560px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(5,25,30,.6)}
+.m{padding:20px;display:grid;gap:12px}
+.m .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.x{justify-self:end;background:none;border:0;font-size:26px;cursor:pointer;line-height:1;margin:-6px -6px 0 0}
+.add{display:flex;justify-content:space-between;gap:8px;font-size:15px}
+.sum{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px}
+.sum div{display:flex;justify-content:space-between;gap:10px}
+.sum .tot{border-top:1px dashed var(--line);margin-top:6px;padding-top:6px;font:700 18px Mali,sans-serif}
+.err{color:var(--bad);font-size:14px;min-height:20px}
+.bk{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:24px 18px 40px}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .15s}.card:hover{transform:translateY(-3px)}.dc{animation:bob 4s ease-in-out infinite}.d2{animation-delay:-1.3s}.d3{animation-delay:-2.4s}.d4{animation-delay:-.6s}@keyframes bob{50%{transform:translateY(-10px) rotate(6deg)}}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<nav><span class="logo">🫧 บลูพูล วิลล่า</span><button class="navbtn" id="mybk">การจองของฉัน</button></nav>
+<div class="hero"><h1>พักผ่อนส่วนตัว พร้อมสระน้ำเป็นของคุณเอง ✨</h1><p>เลือกวันเข้าพัก ดูราคารวมทันที และจองได้ในไม่กี่ขั้นตอน</p></div>
+</div><span class="dc d1" aria-hidden="true">🦆</span><span class="dc d2" aria-hidden="true">🫧</span><span class="dc d3" aria-hidden="true">🌸</span><span class="dc d4" aria-hidden="true">✨</span><svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C150 60 300 0 450 25S750 60 900 25S1100 5 1200 30V60H0Z" style="fill:var(--bg)"/></svg></header>
+<main class="wrap">
+<form class="search" id="sf" onsubmit="return false">
+<div><label class="f" for="ci">เช็คอิน</label><input type="date" id="ci"></div>
+<div><label class="f" for="co">เช็คเอาต์</label><input type="date" id="co"></div>
+<div><label class="f" for="gs">ผู้เข้าพัก (คน)</label><input type="number" id="gs" min="1" max="40" value="4"></div>
+<div><label class="f" for="mp">งบสูงสุดต่อคืน</label><select id="mp"><option value="0">ไม่จำกัด</option><option value="6000">ไม่เกิน 6,000</option><option value="10000">ไม่เกิน 10,000</option><option value="15000">ไม่เกิน 15,000</option></select></div>
+<button class="btn" id="go">ค้นหาวิลล่า</button>
+</form>
+<div class="tools" id="tools" role="group" aria-label="ตัวกรอง"></div>
+<div id="count" aria-live="polite"></div>
+<section class="grid" id="list"></section>
+</main>
+<footer>🌸 เว็บไซต์ตัวอย่าง ไม่มีฐานข้อมูล: การจองเก็บในเบราว์เซอร์ของคุณเท่านั้น</footer>
+
+<dialog id="bd"><div class="m" id="bm"></div></dialog>
+<dialog id="md"><div class="m" id="mm"></div></dialog>
+
+<script>
+var VILLAS=[
+{id:1,name:"วิลล่าสายลมทะเล",area:"หัวหิน",bed:3,max:8,wd:6500,we:8500,fl:"linear-gradient(135deg,#8fdcec,#d2f4f8)",em:"🐬",am:["สระส่วนตัว","ใกล้ทะเล","ห้องครัว","ปิ้งย่าง"],busy:[["2026-11-20","2026-11-23"]]},
+{id:2,name:"ภูเขาพูลวิลล่า",area:"เขาใหญ่",bed:4,max:12,wd:9500,we:12500,fl:"linear-gradient(135deg,#a8e6c3,#e2f8ea)",em:"🍃",am:["สระส่วนตัว","จากุซซี่","คาราโอเกะ","ห้องครัว"],busy:[["2026-11-14","2026-11-16"]]},
+{id:3,name:"บ้านมะพร้าว พัทยา",area:"พัทยา",bed:5,max:16,wd:12000,we:16000,fl:"linear-gradient(135deg,#ffc79e,#ffe9d6)",em:"🥥",am:["สระส่วนตัว","คาราโอเกะ","ปิ้งย่าง","สนามกีฬา"],busy:[]},
+{id:4,name:"ลากูนวิลล่า ชะอำ",area:"ชะอำ",bed:2,max:6,wd:4800,we:6200,fl:"linear-gradient(135deg,#a9c8ff,#dfe9ff)",em:"🐚",am:["สระส่วนตัว","ใกล้ทะเล","เลี้ยงสัตว์ได้"],busy:[["2026-11-27","2026-11-30"]]},
+{id:5,name:"เดอะการ์เด้น ปราณบุรี",area:"ปราณบุรี",bed:3,max:10,wd:7200,we:9200,fl:"linear-gradient(135deg,#cdb8f5,#eee6ff)",em:"🦄",am:["สระส่วนตัว","จากุซซี่","เลี้ยงสัตว์ได้","ปิ้งย่าง"],busy:[]},
+{id:6,name:"วิลล่าซันเซ็ต ภูเก็ต",area:"ภูเก็ต",bed:6,max:14,wd:15500,we:19000,fl:"linear-gradient(135deg,#ffb0c8,#ffe3ec)",em:"🌸",am:["สระส่วนตัว","ใกล้ทะเล","จากุซซี่","ห้องครัว"],busy:[["2026-12-24","2026-12-28"]]}];
+var ADDS=[{k:"bf",n:"อาหารเช้า (ต่อคน/วัน)",p:250,pp:1},{k:"bbq",n:"ชุดปิ้งย่าง BBQ",p:1200},{k:"bd",n:"ตกแต่งวันเกิด",p:1500},{k:"tr",n:"รถรับส่งสนามบิน",p:2500}];
+var PROMO={SUMMER10:{t:"pct",v:10,d:"ลด 10%"},WELCOME500:{t:"amt",v:500,d:"ลด 500 บาท"}};
+var CLEAN=800,DEP=0.3,EXTRA=300,tags=[],$=function(i){return document.getElementById(i)};
+var store={get:function(){try{return JSON.parse(localStorage.getItem("bv_bookings")||"[]")}catch(e){return[]}},set:function(a){try{localStorage.setItem("bv_bookings",JSON.stringify(a))}catch(e){}}};
+var mem=store.get();
+function fmt(n){return n.toLocaleString("th-TH")}
+function iso(d){return d.toISOString().slice(0,10)}
+function addDays(s,n){var d=new Date(s+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+n);return iso(d)}
+function nightsOf(a,b){var r=[],d=a;while(d<b){r.push(d);d=addDays(d,1)}return r}
+function isWE(s){var w=new Date(s+"T00:00:00Z").getUTCDay();return w==5||w==6}
+function overlap(a,b,c,d){return a<d&&c<b}
+function free(v,a,b){
+ for(var i=0;i<v.busy.length;i++)if(overlap(a,b,v.busy[i][0],v.busy[i][1]))return false;
+ for(var j=0;j<mem.length;j++)if(mem[j].vid==v.id&&mem[j].st=="ยืนยันแล้ว"&&overlap(a,b,mem[j].ci,mem[j].co))return false;
+ return true}
+function price(v,a,b,g,sel,code){
+ var ns=nightsOf(a,b),room=0,i;
+ for(i=0;i<ns.length;i++)room+=isWE(ns[i])?v.we:v.wd;
+ var extra=Math.max(0,g-Math.ceil(v.max*0.6))*EXTRA*ns.length;
+ var ad=0,lines=[];
+ sel.forEach(function(k){var x=ADDS.filter(function(z){return z.k==k})[0];var c=x.pp?x.p*g*ns.length:x.p;ad+=c;lines.push([x.n,c])});
+ var sub=room+extra+CLEAN+ad,disc=0,pr=PROMO[code];
+ if(pr)disc=pr.t=="pct"?Math.round(sub*pr.v/100):Math.min(pr.v,sub);
+ var tot=sub-disc;
+ return{n:ns.length,room:room,extra:extra,ad:ad,lines:lines,disc:disc,tot:tot,dep:Math.round(tot*DEP)}}
+function today(){return iso(new Date())}
+function init(){
+ var t=today();$("ci").min=t;$("co").min=addDays(t,1);
+ $("ci").value=addDays(t,7);$("co").value=addDays(t,9);
+ var ams=["สระส่วนตัว","ใกล้ทะเล","จากุซซี่","คาราโอเกะ","ห้องครัว","ปิ้งย่าง","เลี้ยงสัตว์ได้"],h="";
+ ams.forEach(function(a){h+='<button class="chip" aria-pressed="false" data-t="'+a+'">'+a+'</button>'});
+ h+='<select id="so" aria-label="เรียงลำดับ"><option value="0">เรียงตามแนะนำ</option><option value="1">ราคาต่ำไปสูง</option><option value="2">ราคาสูงไปต่ำ</option><option value="3">จุคนมากสุด</option></select>';
+ $("tools").innerHTML=h;
+ $("tools").onclick=function(e){var b=e.target.closest(".chip");if(!b)return;var on=b.getAttribute("aria-pressed")=="true";b.setAttribute("aria-pressed",!on);tags=[].slice.call(document.querySelectorAll(".chip[aria-pressed=true]")).map(function(x){return x.dataset.t});render()};
+ $("so").onchange=render;$("go").onclick=render;["ci","co","gs","mp"].forEach(function(i){$(i).onchange=render});
+ $("ci").onchange=function(){if($("co").value<=$("ci").value)$("co").value=addDays($("ci").value,1);render()};
+ $("mybk").onclick=showMine;render()}
+function render(){
+ var a=$("ci").value,b=$("co").value,g=+$("gs").value||1,mp=+$("mp").value,ok=a&&b&&b>a;
+ var L=VILLAS.filter(function(v){return v.max>=g&&(!mp||v.wd<=mp)&&tags.every(function(t){return v.am.indexOf(t)>-1})});
+ var s=$("so").value;
+ L.sort(function(x,y){return s==1?x.wd-y.wd:s==2?y.wd-x.wd:s==3?y.max-x.max:x.id-y.id});
+ $("count").textContent=ok?"พบ "+L.length+" วิลล่าที่รองรับ "+g+" คน":"เลือกวันเช็คอินและเช็คเอาต์ให้ถูกต้อง";
+ var h="";
+ L.forEach(function(v){var f=ok?free(v,a,b):true;
+  h+='<article class="card"><div class="pic" style="background:'+v.fl+'"><span aria-hidden="true">'+v.em+'</span><small>'+v.area+'</small></div><div class="body"><h3>'+v.name+'</h3><div class="meta">'+v.bed+' ห้องนอน, รองรับ '+v.max+' คน</div><div class="tags">'+v.am.map(function(x){return"<span>"+x+"</span>"}).join("")+'</div><div class="price"><div><b>฿'+fmt(v.wd)+'</b> <span class="meta">/คืน (ศุกร์-เสาร์ ฿'+fmt(v.we)+')</span><div class="status '+(f?"ok":"no")+'">'+(f?"ว่างในวันที่เลือก":"ไม่ว่างในวันที่เลือก")+'</div></div><button class="btn" '+(f&&ok?"":"disabled")+' data-id="'+v.id+'">จองเลย</button></div></div></article>'});
+ $("list").innerHTML=h||'<div class="empty">ไม่พบวิลล่าที่ตรงเงื่อนไข ลองลดตัวกรองหรือเพิ่มงบประมาณ</div>';
+ [].forEach.call(document.querySelectorAll(".card .btn"),function(b){b.onclick=function(){openBook(+b.dataset.id)}})}
+function openBook(id){
+ var v=VILLAS.filter(function(x){return x.id==id})[0],m=$("bm");
+ m.innerHTML='<button class="x" aria-label="ปิด" id="cl">×</button><h2>จอง '+v.name+'</h2>'+
+ '<div class="row"><div><label class="f" for="bci">เช็คอิน</label><input type="date" id="bci" value="'+$("ci").value+'" min="'+today()+'"></div><div><label class="f" for="bco">เช็คเอาต์</label><input type="date" id="bco" value="'+$("co").value+'"></div></div>'+
+ '<div><label class="f" for="bg">จำนวนผู้เข้าพัก (สูงสุด '+v.max+')</label><input type="number" id="bg" min="1" max="'+v.max+'" value="'+Math.min(+$("gs").value||1,v.max)+'"></div>'+
+ '<fieldset style="border:1px solid var(--line);border-radius:12px"><legend class="f">บริการเสริม</legend>'+ADDS.map(function(x){return'<label class="add"><span><input type="checkbox" value="'+x.k+'"> '+x.n+'</span><span>฿'+fmt(x.p)+'</span></label>'}).join("")+'</fieldset>'+
+ '<div><label class="f" for="pc">โค้ดส่วนลด (ลอง SUMMER10 หรือ WELCOME500)</label><input type="text" id="pc"></div>'+
+ '<div class="row"><div><label class="f" for="nm">ชื่อผู้จอง</label><input type="text" id="nm" autocomplete="name"></div><div><label class="f" for="ph">เบอร์โทร</label><input type="tel" id="ph" autocomplete="tel"></div></div>'+
+ '<div class="sum" id="sm"></div><div class="err" id="er" role="alert"></div><button class="btn sun" id="cf">ยืนยันการจอง</button>';
+ function calc(){
+  var a=$("bci").value,b=$("bco").value,g=Math.max(1,+$("bg").value||1),sel=[].slice.call(m.querySelectorAll("fieldset input:checked")).map(function(x){return x.value}),code=$("pc").value.trim().toUpperCase();
+  var e="",p=null;
+  if(!a||!b||b<=a)e="วันเช็คเอาต์ต้องหลังวันเช็คอิน";
+  else if(g>v.max)e="รองรับสูงสุด "+v.max+" คน";
+  else if(!free(v,a,b))e="วิลล่านี้ไม่ว่างในช่วงวันที่เลือก";
+  else p=price(v,a,b,g,sel,code);
+  $("er").textContent=e;
+  if(!p){$("sm").innerHTML="กรอกข้อมูลให้ครบเพื่อดูราคา";return null}
+  var h='<div><span>ค่าห้อง '+p.n+' คืน</span><span>฿'+fmt(p.room)+'</span></div>';
+  if(p.extra)h+='<div><span>ค่าผู้เข้าพักเพิ่ม</span><span>฿'+fmt(p.extra)+'</span></div>';
+  h+='<div><span>ค่าทำความสะอาด</span><span>฿'+fmt(CLEAN)+'</span></div>';
+  p.lines.forEach(function(l){h+='<div><span>'+l[0]+'</span><span>฿'+fmt(l[1])+'</span></div>'});
+  if(p.disc)h+='<div><span>ส่วนลด ('+PROMO[code].d+')</span><span>-฿'+fmt(p.disc)+'</span></div>';
+  else if(code)h+='<div><span style="color:var(--bad)">ไม่พบโค้ดนี้</span><span></span></div>';
+  h+='<div class="tot"><span>รวมทั้งหมด</span><span>฿'+fmt(p.tot)+'</span></div><div><span>มัดจำ 30% ที่ต้องโอน</span><span>฿'+fmt(p.dep)+'</span></div>';
+  $("sm").innerHTML=h;return{p:p,a:a,b:b,g:g,code:code}}
+ m.oninput=calc;calc();
+ $("cl").onclick=function(){$("bd").close()};
+ $("cf").onclick=function(){
+  var r=calc();if(!r)return;
+  var nm=$("nm").value.trim(),ph=$("ph").value.replace(/\D/g,"");
+  if(!nm){$("er").textContent="กรุณากรอกชื่อผู้จอง";return}
+  if(ph.length<9){$("er").textContent="กรุณากรอกเบอร์โทรให้ถูกต้อง";return}
+  mem=store.get();
+  if(!free(v,r.a,r.b)){$("er").textContent="ช่วงวันที่นี้เพิ่งถูกจองไปแล้ว";return}
+  var bk={code:"BV"+Date.now().toString(36).toUpperCase().slice(-6),vid:v.id,vn:v.name,ci:r.a,co:r.b,g:r.g,nm:nm,ph:ph,tot:r.p.tot,dep:r.p.dep,st:"ยืนยันแล้ว"};
+  mem.push(bk);store.set(mem);$("bd").close();render();done(bk)};
+ $("bd").showModal()}
+function done(k){
+ var txt="ขอจอง "+k.vn+" วันที่ "+k.ci+" ถึง "+k.co+" ("+k.g+" คน) ยอดรวม ฿"+fmt(k.tot)+" รหัส "+k.code;
+ $("mm").innerHTML='<button class="x" aria-label="ปิด" id="c2">×</button><h2>จองสำเร็จ รหัส '+k.code+'</h2><div class="sum"><div><span>วิลล่า</span><span>'+k.vn+'</span></div><div><span>เข้าพัก</span><span>'+k.ci+' ถึง '+k.co+'</span></div><div class="tot"><span>โอนมัดจำ</span><span>฿'+fmt(k.dep)+'</span></div></div><p class="meta">โอนมัดจำภายใน 24 ชั่วโมง แล้วส่งสลิปพร้อมรหัสจองให้ทีมงานทางไลน์หรือโทรศัพท์ คัดลอกข้อความด้านล่างเพื่อส่งได้ทันที</p><div class="sum" id="tx">'+txt+'</div><button class="btn" id="cp">คัดลอกข้อความ</button>';
+ $("c2").onclick=function(){$("md").close()};
+ $("cp").onclick=function(){try{navigator.clipboard.writeText(txt).then(function(){$("cp").textContent="คัดลอกแล้ว"})}catch(e){var r=document.createRange();r.selectNodeContents($("tx"));getSelection().removeAllRanges();getSelection().addRange(r)}};
+ $("md").showModal()}
+function showMine(){
+ mem=store.get();var h='<button class="x" aria-label="ปิด" id="c3">×</button><h2>การจองของฉัน</h2>';
+ if(!mem.length)h+='<p class="meta">ยังไม่มีการจอง เลือกวิลล่าที่ชอบแล้วกด จองเลย</p>';
+ mem.forEach(function(k,i){h+='<div class="bk"><div><b>'+k.vn+'</b><div class="meta">'+k.code+', '+k.ci+' ถึง '+k.co+', '+k.st+'</div></div>'+(k.st=="ยืนยันแล้ว"?'<button class="btn ghost" data-i="'+i+'">ยกเลิก</button>':'')+'</div>'});
+ $("mm").innerHTML=h;$("c3").onclick=function(){$("md").close()};
+ [].forEach.call($("mm").querySelectorAll("[data-i]"),function(b){b.onclick=function(){if(!confirm("ยืนยันการยกเลิกการจองนี้"))return;mem[+b.dataset.i].st="ยกเลิกแล้ว";store.set(mem);render();showMine()}});
+ if(!$("md").open)$("md").showModal()}
+init();
+</script>
+</body>
+</html>
